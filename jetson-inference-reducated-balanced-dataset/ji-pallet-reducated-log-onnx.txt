@@ -1,0 +1,273 @@
+python3 onnx_export.py --model-dir=models/pallet-reducated
+Namespace(input='model_best.pth.tar', model_dir='models/pallet-reducated', no_softmax=False, output='')
+running on device cuda:0
+loading checkpoint:  models/pallet-reducated/model_best.pth.tar
+using model:  resnet18
+=> reshaped ResNet fully-connected layer with: Linear(in_features=512, out_features=2, bias=True)
+adding nn.Softmax layer to model...
+Sequential(
+  (0): ResNet(
+    (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+    (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+    (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+    (layer1): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (layer2): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (layer3): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (layer4): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+    (fc): Linear(in_features=512, out_features=2, bias=True)
+  )
+  (1): Softmax(dim=1)
+)
+input size:  224x224
+exporting model to ONNX...
+graph(%input_0 : Float(1:150528, 3:50176, 224:224, 224:1),
+      %0.conv1.weight : Float(64:147, 3:49, 7:7, 7:1),
+      %0.bn1.weight : Float(64:1),
+      %0.bn1.bias : Float(64:1),
+      %0.bn1.running_mean : Float(64:1),
+      %0.bn1.running_var : Float(64:1),
+      %0.layer1.0.conv1.weight : Float(64:576, 64:9, 3:3, 3:1),
+      %0.layer1.0.bn1.weight : Float(64:1),
+      %0.layer1.0.bn1.bias : Float(64:1),
+      %0.layer1.0.bn1.running_mean : Float(64:1),
+      %0.layer1.0.bn1.running_var : Float(64:1),
+      %0.layer1.0.conv2.weight : Float(64:576, 64:9, 3:3, 3:1),
+      %0.layer1.0.bn2.weight : Float(64:1),
+      %0.layer1.0.bn2.bias : Float(64:1),
+      %0.layer1.0.bn2.running_mean : Float(64:1),
+      %0.layer1.0.bn2.running_var : Float(64:1),
+      %0.layer1.1.conv1.weight : Float(64:576, 64:9, 3:3, 3:1),
+      %0.layer1.1.bn1.weight : Float(64:1),
+      %0.layer1.1.bn1.bias : Float(64:1),
+      %0.layer1.1.bn1.running_mean : Float(64:1),
+      %0.layer1.1.bn1.running_var : Float(64:1),
+      %0.layer1.1.conv2.weight : Float(64:576, 64:9, 3:3, 3:1),
+      %0.layer1.1.bn2.weight : Float(64:1),
+      %0.layer1.1.bn2.bias : Float(64:1),
+      %0.layer1.1.bn2.running_mean : Float(64:1),
+      %0.layer1.1.bn2.running_var : Float(64:1),
+      %0.layer2.0.conv1.weight : Float(128:576, 64:9, 3:3, 3:1),
+      %0.layer2.0.bn1.weight : Float(128:1),
+      %0.layer2.0.bn1.bias : Float(128:1),
+      %0.layer2.0.bn1.running_mean : Float(128:1),
+      %0.layer2.0.bn1.running_var : Float(128:1),
+      %0.layer2.0.conv2.weight : Float(128:1152, 128:9, 3:3, 3:1),
+      %0.layer2.0.bn2.weight : Float(128:1),
+      %0.layer2.0.bn2.bias : Float(128:1),
+      %0.layer2.0.bn2.running_mean : Float(128:1),
+      %0.layer2.0.bn2.running_var : Float(128:1),
+      %0.layer2.0.downsample.0.weight : Float(128:64, 64:1, 1:1, 1:1),
+      %0.layer2.0.downsample.1.weight : Float(128:1),
+      %0.layer2.0.downsample.1.bias : Float(128:1),
+      %0.layer2.0.downsample.1.running_mean : Float(128:1),
+      %0.layer2.0.downsample.1.running_var : Float(128:1),
+      %0.layer2.1.conv1.weight : Float(128:1152, 128:9, 3:3, 3:1),
+      %0.layer2.1.bn1.weight : Float(128:1),
+      %0.layer2.1.bn1.bias : Float(128:1),
+      %0.layer2.1.bn1.running_mean : Float(128:1),
+      %0.layer2.1.bn1.running_var : Float(128:1),
+      %0.layer2.1.conv2.weight : Float(128:1152, 128:9, 3:3, 3:1),
+      %0.layer2.1.bn2.weight : Float(128:1),
+      %0.layer2.1.bn2.bias : Float(128:1),
+      %0.layer2.1.bn2.running_mean : Float(128:1),
+      %0.layer2.1.bn2.running_var : Float(128:1),
+      %0.layer3.0.conv1.weight : Float(256:1152, 128:9, 3:3, 3:1),
+      %0.layer3.0.bn1.weight : Float(256:1),
+      %0.layer3.0.bn1.bias : Float(256:1),
+      %0.layer3.0.bn1.running_mean : Float(256:1),
+      %0.layer3.0.bn1.running_var : Float(256:1),
+      %0.layer3.0.conv2.weight : Float(256:2304, 256:9, 3:3, 3:1),
+      %0.layer3.0.bn2.weight : Float(256:1),
+      %0.layer3.0.bn2.bias : Float(256:1),
+      %0.layer3.0.bn2.running_mean : Float(256:1),
+      %0.layer3.0.bn2.running_var : Float(256:1),
+      %0.layer3.0.downsample.0.weight : Float(256:128, 128:1, 1:1, 1:1),
+      %0.layer3.0.downsample.1.weight : Float(256:1),
+      %0.layer3.0.downsample.1.bias : Float(256:1),
+      %0.layer3.0.downsample.1.running_mean : Float(256:1),
+      %0.layer3.0.downsample.1.running_var : Float(256:1),
+      %0.layer3.1.conv1.weight : Float(256:2304, 256:9, 3:3, 3:1),
+      %0.layer3.1.bn1.weight : Float(256:1),
+      %0.layer3.1.bn1.bias : Float(256:1),
+      %0.layer3.1.bn1.running_mean : Float(256:1),
+      %0.layer3.1.bn1.running_var : Float(256:1),
+      %0.layer3.1.conv2.weight : Float(256:2304, 256:9, 3:3, 3:1),
+      %0.layer3.1.bn2.weight : Float(256:1),
+      %0.layer3.1.bn2.bias : Float(256:1),
+      %0.layer3.1.bn2.running_mean : Float(256:1),
+      %0.layer3.1.bn2.running_var : Float(256:1),
+      %0.layer4.0.conv1.weight : Float(512:2304, 256:9, 3:3, 3:1),
+      %0.layer4.0.bn1.weight : Float(512:1),
+      %0.layer4.0.bn1.bias : Float(512:1),
+      %0.layer4.0.bn1.running_mean : Float(512:1),
+      %0.layer4.0.bn1.running_var : Float(512:1),
+      %0.layer4.0.conv2.weight : Float(512:4608, 512:9, 3:3, 3:1),
+      %0.layer4.0.bn2.weight : Float(512:1),
+      %0.layer4.0.bn2.bias : Float(512:1),
+      %0.layer4.0.bn2.running_mean : Float(512:1),
+      %0.layer4.0.bn2.running_var : Float(512:1),
+      %0.layer4.0.downsample.0.weight : Float(512:256, 256:1, 1:1, 1:1),
+      %0.layer4.0.downsample.1.weight : Float(512:1),
+      %0.layer4.0.downsample.1.bias : Float(512:1),
+      %0.layer4.0.downsample.1.running_mean : Float(512:1),
+      %0.layer4.0.downsample.1.running_var : Float(512:1),
+      %0.layer4.1.conv1.weight : Float(512:4608, 512:9, 3:3, 3:1),
+      %0.layer4.1.bn1.weight : Float(512:1),
+      %0.layer4.1.bn1.bias : Float(512:1),
+      %0.layer4.1.bn1.running_mean : Float(512:1),
+      %0.layer4.1.bn1.running_var : Float(512:1),
+      %0.layer4.1.conv2.weight : Float(512:4608, 512:9, 3:3, 3:1),
+      %0.layer4.1.bn2.weight : Float(512:1),
+      %0.layer4.1.bn2.bias : Float(512:1),
+      %0.layer4.1.bn2.running_mean : Float(512:1),
+      %0.layer4.1.bn2.running_var : Float(512:1),
+      %0.fc.weight : Float(2:512, 512:1),
+      %0.fc.bias : Float(2:1)):
+  %123 : Float(1:802816, 64:12544, 112:112, 112:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[7, 7], pads=[3, 3, 3, 3], strides=[2, 2]](%input_0, %0.conv1.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %124 : Float(1:802816, 64:12544, 112:112, 112:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%123, %0.bn1.weight, %0.bn1.bias, %0.bn1.running_mean, %0.bn1.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %125 : Float(1:802816, 64:12544, 112:112, 112:1) = onnx::Relu(%124) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %126 : Float(1:200704, 64:3136, 56:56, 56:1) = onnx::MaxPool[kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%125) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:576:0
+  %127 : Float(1:200704, 64:3136, 56:56, 56:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%126, %0.layer1.0.conv1.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %128 : Float(1:200704, 64:3136, 56:56, 56:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%127, %0.layer1.0.bn1.weight, %0.layer1.0.bn1.bias, %0.layer1.0.bn1.running_mean, %0.layer1.0.bn1.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %129 : Float(1:200704, 64:3136, 56:56, 56:1) = onnx::Relu(%128) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %130 : Float(1:200704, 64:3136, 56:56, 56:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%129, %0.layer1.0.conv2.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %131 : Float(1:200704, 64:3136, 56:56, 56:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%130, %0.layer1.0.bn2.weight, %0.layer1.0.bn2.bias, %0.layer1.0.bn2.running_mean, %0.layer1.0.bn2.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %132 : Float(1:200704, 64:3136, 56:56, 56:1) = onnx::Add(%131, %126)
+  %133 : Float(1:200704, 64:3136, 56:56, 56:1) = onnx::Relu(%132) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %134 : Float(1:200704, 64:3136, 56:56, 56:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%133, %0.layer1.1.conv1.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %135 : Float(1:200704, 64:3136, 56:56, 56:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%134, %0.layer1.1.bn1.weight, %0.layer1.1.bn1.bias, %0.layer1.1.bn1.running_mean, %0.layer1.1.bn1.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %136 : Float(1:200704, 64:3136, 56:56, 56:1) = onnx::Relu(%135) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %137 : Float(1:200704, 64:3136, 56:56, 56:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%136, %0.layer1.1.conv2.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %138 : Float(1:200704, 64:3136, 56:56, 56:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%137, %0.layer1.1.bn2.weight, %0.layer1.1.bn2.bias, %0.layer1.1.bn2.running_mean, %0.layer1.1.bn2.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %139 : Float(1:200704, 64:3136, 56:56, 56:1) = onnx::Add(%138, %133)
+  %140 : Float(1:200704, 64:3136, 56:56, 56:1) = onnx::Relu(%139) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %141 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%140, %0.layer2.0.conv1.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %142 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%141, %0.layer2.0.bn1.weight, %0.layer2.0.bn1.bias, %0.layer2.0.bn1.running_mean, %0.layer2.0.bn1.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %143 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::Relu(%142) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %144 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%143, %0.layer2.0.conv2.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %145 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%144, %0.layer2.0.bn2.weight, %0.layer2.0.bn2.bias, %0.layer2.0.bn2.running_mean, %0.layer2.0.bn2.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %146 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[2, 2]](%140, %0.layer2.0.downsample.0.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %147 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%146, %0.layer2.0.downsample.1.weight, %0.layer2.0.downsample.1.bias, %0.layer2.0.downsample.1.running_mean, %0.layer2.0.downsample.1.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %148 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::Add(%145, %147)
+  %149 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::Relu(%148) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %150 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%149, %0.layer2.1.conv1.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %151 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%150, %0.layer2.1.bn1.weight, %0.layer2.1.bn1.bias, %0.layer2.1.bn1.running_mean, %0.layer2.1.bn1.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %152 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::Relu(%151) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %153 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%152, %0.layer2.1.conv2.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %154 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%153, %0.layer2.1.bn2.weight, %0.layer2.1.bn2.bias, %0.layer2.1.bn2.running_mean, %0.layer2.1.bn2.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %155 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::Add(%154, %149)
+  %156 : Float(1:100352, 128:784, 28:28, 28:1) = onnx::Relu(%155) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %157 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%156, %0.layer3.0.conv1.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %158 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%157, %0.layer3.0.bn1.weight, %0.layer3.0.bn1.bias, %0.layer3.0.bn1.running_mean, %0.layer3.0.bn1.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %159 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::Relu(%158) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %160 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%159, %0.layer3.0.conv2.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %161 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%160, %0.layer3.0.bn2.weight, %0.layer3.0.bn2.bias, %0.layer3.0.bn2.running_mean, %0.layer3.0.bn2.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %162 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[2, 2]](%156, %0.layer3.0.downsample.0.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %163 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%162, %0.layer3.0.downsample.1.weight, %0.layer3.0.downsample.1.bias, %0.layer3.0.downsample.1.running_mean, %0.layer3.0.downsample.1.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %164 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::Add(%161, %163)
+  %165 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::Relu(%164) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %166 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%165, %0.layer3.1.conv1.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %167 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%166, %0.layer3.1.bn1.weight, %0.layer3.1.bn1.bias, %0.layer3.1.bn1.running_mean, %0.layer3.1.bn1.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %168 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::Relu(%167) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %169 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%168, %0.layer3.1.conv2.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %170 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%169, %0.layer3.1.bn2.weight, %0.layer3.1.bn2.bias, %0.layer3.1.bn2.running_mean, %0.layer3.1.bn2.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %171 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::Add(%170, %165)
+  %172 : Float(1:50176, 256:196, 14:14, 14:1) = onnx::Relu(%171) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %173 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%172, %0.layer4.0.conv1.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %174 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%173, %0.layer4.0.bn1.weight, %0.layer4.0.bn1.bias, %0.layer4.0.bn1.running_mean, %0.layer4.0.bn1.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %175 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::Relu(%174) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %176 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%175, %0.layer4.0.conv2.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %177 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%176, %0.layer4.0.bn2.weight, %0.layer4.0.bn2.bias, %0.layer4.0.bn2.running_mean, %0.layer4.0.bn2.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %178 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[2, 2]](%172, %0.layer4.0.downsample.0.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %179 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%178, %0.layer4.0.downsample.1.weight, %0.layer4.0.downsample.1.bias, %0.layer4.0.downsample.1.running_mean, %0.layer4.0.downsample.1.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %180 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::Add(%177, %179)
+  %181 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::Relu(%180) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %182 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%181, %0.layer4.1.conv1.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %183 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%182, %0.layer4.1.bn1.weight, %0.layer4.1.bn1.bias, %0.layer4.1.bn1.running_mean, %0.layer4.1.bn1.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %184 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::Relu(%183) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %185 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%184, %0.layer4.1.conv2.weight) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/modules/conv.py:416:0
+  %186 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::BatchNormalization[epsilon=1.0000000000000001e-05, momentum=0.90000000000000002](%185, %0.layer4.1.bn2.weight, %0.layer4.1.bn2.bias, %0.layer4.1.bn2.running_mean, %0.layer4.1.bn2.running_var) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:2016:0
+  %187 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::Add(%186, %181)
+  %188 : Float(1:25088, 512:49, 7:7, 7:1) = onnx::Relu(%187) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1117:0
+  %189 : Float(1:512, 512:1, 1:1, 1:1) = onnx::GlobalAveragePool(%188) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:926:0
+  %190 : Float(1:512, 512:1) = onnx::Flatten[axis=1](%189) # /usr/local/lib/python3.6/dist-packages/torchvision-0.7.0a0+78ed10c-py3.6-linux-aarch64.egg/torchvision/models/resnet.py:214:0
+  %191 : Float(1:2, 2:1) = onnx::Gemm[alpha=1., beta=1., transB=1](%190, %0.fc.weight, %0.fc.bias) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1674:0
+  %output_0 : Float(1:2, 2:1) = onnx::Softmax[axis=1](%191) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1498:0
+  return (%output_0)
+
+model exported to:  models/pallet-reducated/resnet18.onnx
+

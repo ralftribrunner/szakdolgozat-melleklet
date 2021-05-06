@@ -1,0 +1,192 @@
+Namespace(input='model_best.pth.tar', model_dir='models/basic-pallet', no_softmax=False, output='')
+running on device cuda:0
+loading checkpoint:  models/basic-pallet/model_best.pth.tar
+using model:  resnet18
+=> reshaped ResNet fully-connected layer with: Linear(in_features=512, out_features=2, bias=True)
+adding nn.Softmax layer to model...
+Sequential(
+  (0): ResNet(
+    (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+    (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+    (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+    (layer1): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (layer2): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (layer3): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (layer4): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+    (fc): Linear(in_features=512, out_features=2, bias=True)
+  )
+  (1): Softmax(dim=1)
+)
+input size:  224x224
+exporting model to ONNX...
+graph(%input_0 : Float(1, 3, 224, 224, strides=[150528, 50176, 224, 1], requires_grad=0, device=cuda:0),
+      %0.fc.weight : Float(2, 512, strides=[512, 1], requires_grad=1, device=cuda:0),
+      %0.fc.bias : Float(2, strides=[1], requires_grad=1, device=cuda:0),
+      %194 : Float(64, 3, 7, 7, strides=[147, 49, 7, 1], requires_grad=0, device=cuda:0),
+      %195 : Float(64, strides=[1], requires_grad=0, device=cuda:0),
+      %197 : Float(64, 64, 3, 3, strides=[576, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %198 : Float(64, strides=[1], requires_grad=0, device=cuda:0),
+      %200 : Float(64, 64, 3, 3, strides=[576, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %201 : Float(64, strides=[1], requires_grad=0, device=cuda:0),
+      %203 : Float(64, 64, 3, 3, strides=[576, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %204 : Float(64, strides=[1], requires_grad=0, device=cuda:0),
+      %206 : Float(64, 64, 3, 3, strides=[576, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %207 : Float(64, strides=[1], requires_grad=0, device=cuda:0),
+      %209 : Float(128, 64, 3, 3, strides=[576, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %210 : Float(128, strides=[1], requires_grad=0, device=cuda:0),
+      %212 : Float(128, 128, 3, 3, strides=[1152, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %213 : Float(128, strides=[1], requires_grad=0, device=cuda:0),
+      %215 : Float(128, 64, 1, 1, strides=[64, 1, 1, 1], requires_grad=0, device=cuda:0),
+      %216 : Float(128, strides=[1], requires_grad=0, device=cuda:0),
+      %218 : Float(128, 128, 3, 3, strides=[1152, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %219 : Float(128, strides=[1], requires_grad=0, device=cuda:0),
+      %221 : Float(128, 128, 3, 3, strides=[1152, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %222 : Float(128, strides=[1], requires_grad=0, device=cuda:0),
+      %224 : Float(256, 128, 3, 3, strides=[1152, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %225 : Float(256, strides=[1], requires_grad=0, device=cuda:0),
+      %227 : Float(256, 256, 3, 3, strides=[2304, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %228 : Float(256, strides=[1], requires_grad=0, device=cuda:0),
+      %230 : Float(256, 128, 1, 1, strides=[128, 1, 1, 1], requires_grad=0, device=cuda:0),
+      %231 : Float(256, strides=[1], requires_grad=0, device=cuda:0),
+      %233 : Float(256, 256, 3, 3, strides=[2304, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %234 : Float(256, strides=[1], requires_grad=0, device=cuda:0),
+      %236 : Float(256, 256, 3, 3, strides=[2304, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %237 : Float(256, strides=[1], requires_grad=0, device=cuda:0),
+      %239 : Float(512, 256, 3, 3, strides=[2304, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %240 : Float(512, strides=[1], requires_grad=0, device=cuda:0),
+      %242 : Float(512, 512, 3, 3, strides=[4608, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %243 : Float(512, strides=[1], requires_grad=0, device=cuda:0),
+      %245 : Float(512, 256, 1, 1, strides=[256, 1, 1, 1], requires_grad=0, device=cuda:0),
+      %246 : Float(512, strides=[1], requires_grad=0, device=cuda:0),
+      %248 : Float(512, 512, 3, 3, strides=[4608, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %249 : Float(512, strides=[1], requires_grad=0, device=cuda:0),
+      %251 : Float(512, 512, 3, 3, strides=[4608, 9, 3, 1], requires_grad=0, device=cuda:0),
+      %252 : Float(512, strides=[1], requires_grad=0, device=cuda:0)):
+  %193 : Float(1, 64, 112, 112, strides=[802816, 12544, 112, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[7, 7], pads=[3, 3, 3, 3], strides=[2, 2]](%input_0, %194, %195)
+  %125 : Float(1, 64, 112, 112, strides=[802816, 12544, 112, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%193) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1204:0
+  %126 : Float(1, 64, 56, 56, strides=[200704, 3136, 56, 1], requires_grad=1, device=cuda:0) = onnx::MaxPool[kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%125)
+  %196 : Float(1, 64, 56, 56, strides=[200704, 3136, 56, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%126, %197, %198)
+  %129 : Float(1, 64, 56, 56, strides=[200704, 3136, 56, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%196) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1204:0
+  %199 : Float(1, 64, 56, 56, strides=[200704, 3136, 56, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%129, %200, %201)
+  %132 : Float(1, 64, 56, 56, strides=[200704, 3136, 56, 1], requires_grad=1, device=cuda:0) = onnx::Add(%199, %126) # /home/gamma/.local/lib/python3.6/site-packages/torchvision-0.9.0-py3.6-linux-aarch64.egg/torchvision/models/resnet.py:80:0
+  %133 : Float(1, 64, 56, 56, strides=[200704, 3136, 56, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%132)
+  %202 : Float(1, 64, 56, 56, strides=[200704, 3136, 56, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%133, %203, %204)
+  %136 : Float(1, 64, 56, 56, strides=[200704, 3136, 56, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%202) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1204:0
+  %205 : Float(1, 64, 56, 56, strides=[200704, 3136, 56, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%136, %206, %207)
+  %139 : Float(1, 64, 56, 56, strides=[200704, 3136, 56, 1], requires_grad=1, device=cuda:0) = onnx::Add(%205, %133) # /home/gamma/.local/lib/python3.6/site-packages/torchvision-0.9.0-py3.6-linux-aarch64.egg/torchvision/models/resnet.py:80:0
+  %140 : Float(1, 64, 56, 56, strides=[200704, 3136, 56, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%139) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1204:0
+  %208 : Float(1, 128, 28, 28, strides=[100352, 784, 28, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%140, %209, %210)
+  %143 : Float(1, 128, 28, 28, strides=[100352, 784, 28, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%208) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1204:0
+  %211 : Float(1, 128, 28, 28, strides=[100352, 784, 28, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%143, %212, %213)
+  %214 : Float(1, 128, 28, 28, strides=[100352, 784, 28, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[2, 2]](%140, %215, %216)
+  %148 : Float(1, 128, 28, 28, strides=[100352, 784, 28, 1], requires_grad=1, device=cuda:0) = onnx::Add(%211, %214) # /home/gamma/.local/lib/python3.6/site-packages/torchvision-0.9.0-py3.6-linux-aarch64.egg/torchvision/models/resnet.py:80:0
+  %149 : Float(1, 128, 28, 28, strides=[100352, 784, 28, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%148)
+  %217 : Float(1, 128, 28, 28, strides=[100352, 784, 28, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%149, %218, %219)
+  %152 : Float(1, 128, 28, 28, strides=[100352, 784, 28, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%217) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1204:0
+  %220 : Float(1, 128, 28, 28, strides=[100352, 784, 28, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%152, %221, %222)
+  %155 : Float(1, 128, 28, 28, strides=[100352, 784, 28, 1], requires_grad=1, device=cuda:0) = onnx::Add(%220, %149) # /home/gamma/.local/lib/python3.6/site-packages/torchvision-0.9.0-py3.6-linux-aarch64.egg/torchvision/models/resnet.py:80:0
+  %156 : Float(1, 128, 28, 28, strides=[100352, 784, 28, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%155) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1204:0
+  %223 : Float(1, 256, 14, 14, strides=[50176, 196, 14, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%156, %224, %225)
+  %159 : Float(1, 256, 14, 14, strides=[50176, 196, 14, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%223) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1204:0
+  %226 : Float(1, 256, 14, 14, strides=[50176, 196, 14, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%159, %227, %228)
+  %229 : Float(1, 256, 14, 14, strides=[50176, 196, 14, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[2, 2]](%156, %230, %231)
+  %164 : Float(1, 256, 14, 14, strides=[50176, 196, 14, 1], requires_grad=1, device=cuda:0) = onnx::Add(%226, %229) # /home/gamma/.local/lib/python3.6/site-packages/torchvision-0.9.0-py3.6-linux-aarch64.egg/torchvision/models/resnet.py:80:0
+  %165 : Float(1, 256, 14, 14, strides=[50176, 196, 14, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%164)
+  %232 : Float(1, 256, 14, 14, strides=[50176, 196, 14, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%165, %233, %234)
+  %168 : Float(1, 256, 14, 14, strides=[50176, 196, 14, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%232) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1204:0
+  %235 : Float(1, 256, 14, 14, strides=[50176, 196, 14, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%168, %236, %237)
+  %171 : Float(1, 256, 14, 14, strides=[50176, 196, 14, 1], requires_grad=1, device=cuda:0) = onnx::Add(%235, %165) # /home/gamma/.local/lib/python3.6/site-packages/torchvision-0.9.0-py3.6-linux-aarch64.egg/torchvision/models/resnet.py:80:0
+  %172 : Float(1, 256, 14, 14, strides=[50176, 196, 14, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%171) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1204:0
+  %238 : Float(1, 512, 7, 7, strides=[25088, 49, 7, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[2, 2]](%172, %239, %240)
+  %175 : Float(1, 512, 7, 7, strides=[25088, 49, 7, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%238) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1204:0
+  %241 : Float(1, 512, 7, 7, strides=[25088, 49, 7, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%175, %242, %243)
+  %244 : Float(1, 512, 7, 7, strides=[25088, 49, 7, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[1, 1], pads=[0, 0, 0, 0], strides=[2, 2]](%172, %245, %246)
+  %180 : Float(1, 512, 7, 7, strides=[25088, 49, 7, 1], requires_grad=1, device=cuda:0) = onnx::Add(%241, %244) # /home/gamma/.local/lib/python3.6/site-packages/torchvision-0.9.0-py3.6-linux-aarch64.egg/torchvision/models/resnet.py:80:0
+  %181 : Float(1, 512, 7, 7, strides=[25088, 49, 7, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%180)
+  %247 : Float(1, 512, 7, 7, strides=[25088, 49, 7, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%181, %248, %249)
+  %184 : Float(1, 512, 7, 7, strides=[25088, 49, 7, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%247) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1204:0
+  %250 : Float(1, 512, 7, 7, strides=[25088, 49, 7, 1], requires_grad=1, device=cuda:0) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%184, %251, %252)
+  %187 : Float(1, 512, 7, 7, strides=[25088, 49, 7, 1], requires_grad=1, device=cuda:0) = onnx::Add(%250, %181) # /home/gamma/.local/lib/python3.6/site-packages/torchvision-0.9.0-py3.6-linux-aarch64.egg/torchvision/models/resnet.py:80:0
+  %188 : Float(1, 512, 7, 7, strides=[25088, 49, 7, 1], requires_grad=1, device=cuda:0) = onnx::Relu(%187) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1204:0
+  %189 : Float(1, 512, 1, 1, strides=[512, 1, 1, 1], requires_grad=1, device=cuda:0) = onnx::GlobalAveragePool(%188) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1037:0
+  %190 : Float(1, 512, strides=[512, 1], requires_grad=1, device=cuda:0) = onnx::Flatten[axis=1](%189) # /home/gamma/.local/lib/python3.6/site-packages/torchvision-0.9.0-py3.6-linux-aarch64.egg/torchvision/models/resnet.py:243:0
+  %191 : Float(1, 2, strides=[2, 1], requires_grad=1, device=cuda:0) = onnx::Gemm[alpha=1., beta=1., transB=1](%190, %0.fc.weight, %0.fc.bias) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1753:0
+  %output_0 : Float(1, 2, strides=[2, 1], requires_grad=1, device=cuda:0) = onnx::Softmax[axis=1](%191) # /home/gamma/.local/lib/python3.6/site-packages/torch/nn/functional.py:1583:0
+  return (%output_0)
+
+model exported to:  models/basic-pallet/resnet18.onnx
+

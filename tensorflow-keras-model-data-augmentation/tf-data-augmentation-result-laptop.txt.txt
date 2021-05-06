@@ -1,0 +1,373 @@
+2021-04-27 22:04:44.693695: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'cudart64_110.dll'; dlerror: cudart64_110.dll not found
+2021-04-27 22:04:44.693867: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-04-27 22:04:47.402830: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'nvcuda.dll'; dlerror: nvcuda.dll not found
+2021-04-27 22:04:47.402978: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2021-04-27 22:04:47.406700: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: DESKTOP-PD4EVBV
+2021-04-27 22:04:47.406902: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: DESKTOP-PD4EVBV
+2021-04-27 22:04:47.407448: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+________________________________________________________________
+Image: 1.
+2021-04-27 22:04:47.580648: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 16.9985294342041 ms
+Prediction time: 158.98919105529785 ms
+TOTAL: 175.98772048950195 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.99 percent confidence. It should be empty.
+Preprocessing time: 6.056308746337891 ms
+Prediction time: 60.99367141723633 ms
+TOTAL: 67.04998016357422 ms
+________________________________________________________________
+Image: 2.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 1.0445117950439453 ms
+Prediction time: 39.955854415893555 ms
+TOTAL: 41.0003662109375 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.99 percent confidence. It should be empty.
+Preprocessing time: 1.9998550415039062 ms
+Prediction time: 41.00656509399414 ms
+TOTAL: 43.00642013549805 ms
+________________________________________________________________
+Image: 3.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 1.0466575622558594 ms
+Prediction time: 38.957834243774414 ms
+TOTAL: 40.00449180603027 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.95 percent confidence. It should be empty.
+Preprocessing time: 0.9999275207519531 ms
+Prediction time: 43.00093650817871 ms
+TOTAL: 44.000864028930664 ms
+________________________________________________________________
+Image: 4.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 1.005411148071289 ms
+Prediction time: 51.61929130554199 ms
+TOTAL: 52.62470245361328 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.80 percent confidence. It should be empty.
+Preprocessing time: 1.0037422180175781 ms
+Prediction time: 50.03070831298828 ms
+TOTAL: 51.03445053100586 ms
+________________________________________________________________
+Image: 5.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 0.9915828704833984 ms
+Prediction time: 44.03829574584961 ms
+TOTAL: 45.02987861633301 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.98 percent confidence. It should be empty.
+Preprocessing time: 0.0 ms
+Prediction time: 46.99516296386719 ms
+TOTAL: 46.99516296386719 ms
+________________________________________________________________
+Image: 6.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 1.9996166229248047 ms
+Prediction time: 115.04483222961426 ms
+TOTAL: 117.04444885253906 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.99 percent confidence. It should be empty.
+Preprocessing time: 0.9999275207519531 ms
+Prediction time: 43.9300537109375 ms
+TOTAL: 44.92998123168945 ms
+________________________________________________________________
+Image: 7.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 2.0072460174560547 ms
+Prediction time: 43.65658760070801 ms
+TOTAL: 45.66383361816406 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.96 percent confidence. It should be empty.
+Preprocessing time: 0.9961128234863281 ms
+Prediction time: 47.49321937561035 ms
+TOTAL: 48.48933219909668 ms
+________________________________________________________________
+Image: 8.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 0.0 ms
+Prediction time: 48.03156852722168 ms
+TOTAL: 48.03156852722168 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.98 percent confidence. It should be empty.
+Preprocessing time: 2.9802322387695312 ms
+Prediction time: 48.97117614746094 ms
+TOTAL: 51.95140838623047 ms
+________________________________________________________________
+Image: 9.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 0.9636878967285156 ms
+Prediction time: 48.99406433105469 ms
+TOTAL: 49.9577522277832 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.96 percent confidence. It should be empty.
+Preprocessing time: 0.9999275207519531 ms
+Prediction time: 64.63623046875 ms
+TOTAL: 65.63615798950195 ms
+________________________________________________________________
+Image: 10.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 1.050710678100586 ms
+Prediction time: 44.991254806518555 ms
+TOTAL: 46.04196548461914 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.99 percent confidence. It should be empty.
+Preprocessing time: 3.004789352416992 ms
+Prediction time: 47.948360443115234 ms
+TOTAL: 50.95314979553223 ms
+________________________________________________________________
+Image: 11.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 99.60 percent confidence. It should a pallet.
+Preprocessing time: 1.0068416595458984 ms
+Prediction time: 53.99203300476074 ms
+TOTAL: 54.99887466430664 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.98 percent confidence. It should be empty.
+Preprocessing time: 1.0426044464111328 ms
+Prediction time: 45.93181610107422 ms
+TOTAL: 46.97442054748535 ms
+________________________________________________________________
+Image: 12.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 99.98 percent confidence. It should a pallet.
+Preprocessing time: 2.000093460083008 ms
+Prediction time: 47.99914360046387 ms
+TOTAL: 49.999237060546875 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.99 percent confidence. It should be empty.
+Preprocessing time: 0.9851455688476562 ms
+Prediction time: 47.04594612121582 ms
+TOTAL: 48.03109169006348 ms
+________________________________________________________________
+Image: 13.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 2.0296573638916016 ms
+Prediction time: 46.95582389831543 ms
+TOTAL: 48.98548126220703 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 100.00 percent confidence. It should be empty.
+Preprocessing time: 0.9975433349609375 ms
+Prediction time: 42.9997444152832 ms
+TOTAL: 43.99728775024414 ms
+________________________________________________________________
+Image: 14.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 1.0380744934082031 ms
+Prediction time: 49.95608329772949 ms
+TOTAL: 50.994157791137695 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.99 percent confidence. It should be empty.
+Preprocessing time: 1.0368824005126953 ms
+Prediction time: 43.96629333496094 ms
+TOTAL: 45.00317573547363 ms
+________________________________________________________________
+Image: 15.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 0.0 ms
+Prediction time: 45.00269889831543 ms
+TOTAL: 45.00269889831543 ms
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 95.38 percent confidence. It should be empty.
+Preprocessing time: 2.038240432739258 ms
+Prediction time: 46.343326568603516 ms
+TOTAL: 48.38156700134277 ms
+WRONG DETECTION
+________________________________________________________________
+Image: 16.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 0.9975433349609375 ms
+Prediction time: 45.13835906982422 ms
+TOTAL: 46.135902404785156 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 100.00 percent confidence. It should be empty.
+Preprocessing time: 0.9968280792236328 ms
+Prediction time: 43.92719268798828 ms
+TOTAL: 44.924020767211914 ms
+________________________________________________________________
+Image: 17.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 0.9996891021728516 ms
+Prediction time: 65.0475025177002 ms
+TOTAL: 66.04719161987305 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 100.00 percent confidence. It should be empty.
+Preprocessing time: 1.0063648223876953 ms
+Prediction time: 43.34902763366699 ms
+TOTAL: 44.35539245605469 ms
+________________________________________________________________
+Image: 18.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 1.0106563568115234 ms
+Prediction time: 45.0439453125 ms
+TOTAL: 46.05460166931152 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.98 percent confidence. It should be empty.
+Preprocessing time: 1.0006427764892578 ms
+Prediction time: 47.000885009765625 ms
+TOTAL: 48.00152778625488 ms
+________________________________________________________________
+Image: 19.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 1.0027885437011719 ms
+Prediction time: 45.0434684753418 ms
+TOTAL: 46.04625701904297 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.99 percent confidence. It should be empty.
+Preprocessing time: 1.9941329956054688 ms
+Prediction time: 43.03693771362305 ms
+TOTAL: 45.031070709228516 ms
+________________________________________________________________
+Image: 20.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 1.0020732879638672 ms
+Prediction time: 47.68991470336914 ms
+TOTAL: 48.69198799133301 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 100.00 percent confidence. It should be empty.
+Preprocessing time: 0.9965896606445312 ms
+Prediction time: 45.00007629394531 ms
+TOTAL: 45.996665954589844 ms
+________________________________________________________________
+Image: 21.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 0.9691715240478516 ms
+Prediction time: 48.03204536437988 ms
+TOTAL: 49.001216888427734 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.99 percent confidence. It should be empty.
+Preprocessing time: 0.9984970092773438 ms
+Prediction time: 47.04642295837402 ms
+TOTAL: 48.04491996765137 ms
+________________________________________________________________
+Image: 22.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 1.003265380859375 ms
+Prediction time: 48.99716377258301 ms
+TOTAL: 50.00042915344238 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 100.00 percent confidence. It should be empty.
+Preprocessing time: 2.0453929901123047 ms
+Prediction time: 62.93940544128418 ms
+TOTAL: 64.98479843139648 ms
+________________________________________________________________
+Image: 23.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 1.0051727294921875 ms
+Prediction time: 44.110774993896484 ms
+TOTAL: 45.11594772338867 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.73 percent confidence. It should be empty.
+Preprocessing time: 0.9856224060058594 ms
+Prediction time: 45.99714279174805 ms
+TOTAL: 46.982765197753906 ms
+________________________________________________________________
+Image: 24.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 2.0036697387695312 ms
+Prediction time: 49.439430236816406 ms
+TOTAL: 51.44309997558594 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.98 percent confidence. It should be empty.
+Preprocessing time: 1.0068416595458984 ms
+Prediction time: 54.0003776550293 ms
+TOTAL: 55.007219314575195 ms
+________________________________________________________________
+Image: 25.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 2.0034313201904297 ms
+Prediction time: 48.9959716796875 ms
+TOTAL: 50.99940299987793 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.99 percent confidence. It should be empty.
+Preprocessing time: 1.9676685333251953 ms
+Prediction time: 42.952537536621094 ms
+TOTAL: 44.92020606994629 ms
+________________________________________________________________
+Image: 26.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 56.37 percent confidence. It should a pallet.
+Preprocessing time: 0.9996891021728516 ms
+Prediction time: 46.18191719055176 ms
+TOTAL: 47.18160629272461 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.99 percent confidence. It should be empty.
+Preprocessing time: 1.001119613647461 ms
+Prediction time: 45.998334884643555 ms
+TOTAL: 46.999454498291016 ms
+________________________________________________________________
+Image: 27.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 2.0017623901367188 ms
+Prediction time: 47.997474670410156 ms
+TOTAL: 49.999237060546875 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 100.00 percent confidence. It should be empty.
+Preprocessing time: 1.001119613647461 ms
+Prediction time: 49.3311882019043 ms
+TOTAL: 50.33230781555176 ms
+________________________________________________________________
+Image: 28.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 99.98 percent confidence. It should a pallet.
+Preprocessing time: 2.0461082458496094 ms
+Prediction time: 43.99538040161133 ms
+TOTAL: 46.04148864746094 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.96 percent confidence. It should be empty.
+Preprocessing time: 0.9191036224365234 ms
+Prediction time: 46.03767395019531 ms
+TOTAL: 46.956777572631836 ms
+________________________________________________________________
+Image: 29.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 0.9822845458984375 ms
+Prediction time: 47.99985885620117 ms
+TOTAL: 48.98214340209961 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 100.00 percent confidence. It should be empty.
+Preprocessing time: 0.9968280792236328 ms
+Prediction time: 47.99795150756836 ms
+TOTAL: 48.99477958679199 ms
+________________________________________________________________
+Image: 30.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 1.9981861114501953 ms
+Prediction time: 52.99639701843262 ms
+TOTAL: 54.99458312988281 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.99 percent confidence. It should be empty.
+Preprocessing time: 1.0249614715576172 ms
+Prediction time: 49.9725341796875 ms
+TOTAL: 50.99749565124512 ms
+________________________________________________________________
+Pallet Accuracy: 30/30
+Empty Accuracy: 29/30
