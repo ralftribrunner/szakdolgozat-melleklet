@@ -1,0 +1,14 @@
+Benchmark on 400 image (200 with label 0, 200 with label 1)
+
+Accuracy: 100.0%
+
+Confusion matrix (negative means empty, positive means occupied) with ratio values:
+True Positive  | False Positive
+--------------------------------
+False Negative | True Negative
+
+0.500 | 0.000
+-------------
+0.000 | 0.500
+
+Average time of detection for one line: 0.4143839874267578 sec

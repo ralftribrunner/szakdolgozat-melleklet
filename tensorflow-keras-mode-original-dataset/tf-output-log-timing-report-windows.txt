@@ -1,0 +1,71 @@
+2021-04-12 21:40:08.533958: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'cudart64_110.dll'; dlerror: cudart64_110.dll not found
+2021-04-12 21:40:08.534150: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-04-12 21:40:11.142477: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'nvcuda.dll'; dlerror: nvcuda.dll not found
+2021-04-12 21:40:11.142644: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2021-04-12 21:40:11.146297: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: DESKTOP-PD4EVBV
+2021-04-12 21:40:11.146551: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: DESKTOP-PD4EVBV
+2021-04-12 21:40:11.147249: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with 
+oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-04-12 21:40:11.329646: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization 
+Passes are enabled (registered 2)
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 14.9993896484375 ms
+Prediction time: 162.99915313720703 ms
+TOTAL: 177.99854278564453 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 94.67 percent confidence. It should be empty.
+Preprocessing time: 1.9941329956054688 ms
+Prediction time: 52.00004577636719 ms
+TOTAL: 53.994178771972656 ms
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 2.0127296447753906 ms
+Prediction time: 60.459136962890625 ms
+TOTAL: 62.471866607666016 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 96.84 percent confidence. It should be empty.
+Preprocessing time: 0.9982585906982422 ms
+Prediction time: 62.28137016296387 ms
+TOTAL: 63.27962875366211 ms
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 0.9992122650146484 ms
+Prediction time: 65.99807739257812 ms
+TOTAL: 66.99728965759277 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 97.70 percent confidence. It should be empty.
+Preprocessing time: 1.0008811950683594 ms
+Prediction time: 63.99965286254883 ms
+TOTAL: 65.00053405761719 ms
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 1.0123252868652344 ms
+Prediction time: 62.021732330322266 ms
+TOTAL: 63.0340576171875 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 98.87 percent confidence. It should be empty.
+Preprocessing time: 0.9829998016357422 ms
+Prediction time: 65.99855422973633 ms
+TOTAL: 66.98155403137207 ms
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 0.9996891021728516 ms
+Prediction time: 61.99812889099121 ms
+TOTAL: 62.99781799316406 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.27 percent confidence. It should be empty.
+Preprocessing time: 1.0037422180175781 ms
+Prediction time: 62.03889846801758 ms
+TOTAL: 63.042640686035156 ms
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 0.980377197265625 ms
+Prediction time: 68.00246238708496 ms
+TOTAL: 68.98283958435059 ms
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.66 percent confidence. It should be empty.
+Preprocessing time: 2.006053924560547 ms
+Prediction time: 64.99600410461426 ms
+TOTAL: 67.0020580291748 ms

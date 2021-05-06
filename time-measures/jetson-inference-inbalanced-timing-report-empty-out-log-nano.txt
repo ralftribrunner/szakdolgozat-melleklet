@@ -1,0 +1,252 @@
+imagenet.py --model=models/basic-pallet/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=data/pallet/labels.txt data/pallet/test/empty data/pallet/output/empty
+jetson.inference -- imageNet loading network using argv command line params
+
+imageNet -- loading classification network model from:
+         -- prototxt     (null)
+         -- model        models/basic-pallet/resnet18.onnx
+         -- class_labels data/pallet/labels.txt
+         -- input_blob   'input_0'
+         -- output_blob  'output_0'
+         -- batch_size   1
+
+[TRT]    TensorRT version 7.1.3
+[TRT]    loading NVIDIA plugins...
+[TRT]    Registered plugin creator - ::GridAnchor_TRT version 1
+[TRT]    Registered plugin creator - ::NMS_TRT version 1
+[TRT]    Registered plugin creator - ::Reorg_TRT version 1
+[TRT]    Registered plugin creator - ::Region_TRT version 1
+[TRT]    Registered plugin creator - ::Clip_TRT version 1
+[TRT]    Registered plugin creator - ::LReLU_TRT version 1
+[TRT]    Registered plugin creator - ::PriorBox_TRT version 1
+[TRT]    Registered plugin creator - ::Normalize_TRT version 1
+[TRT]    Registered plugin creator - ::RPROI_TRT version 1
+[TRT]    Registered plugin creator - ::BatchedNMS_TRT version 1
+[TRT]    Could not register plugin creator -  ::FlattenConcat_TRT version 1
+[TRT]    Registered plugin creator - ::CropAndResize version 1
+[TRT]    Registered plugin creator - ::DetectionLayer_TRT version 1
+[TRT]    Registered plugin creator - ::Proposal version 1
+[TRT]    Registered plugin creator - ::ProposalLayer_TRT version 1
+[TRT]    Registered plugin creator - ::PyramidROIAlign_TRT version 1
+[TRT]    Registered plugin creator - ::ResizeNearest_TRT version 1
+[TRT]    Registered plugin creator - ::Split version 1
+[TRT]    Registered plugin creator - ::SpecialSlice_TRT version 1
+[TRT]    Registered plugin creator - ::InstanceNormalization_TRT version 1
+[TRT]    detected model format - ONNX  (extension '.onnx')
+[TRT]    desired precision specified for GPU: FASTEST
+[TRT]    requested fasted precision for device GPU without providing valid calibrator, disabling INT8
+[TRT]    native precisions detected for GPU:  FP32, FP16
+[TRT]    selecting fastest native precision for GPU:  FP16
+[TRT]    attempting to open engine cache file models/basic-pallet/resnet18.onnx.1.1.7103.GPU.FP16.engine
+[TRT]    loading network plan from engine cache... models/basic-pallet/resnet18.onnx.1.1.7103.GPU.FP16.engine
+[TRT]    device GPU, loaded models/basic-pallet/resnet18.onnx
+[TRT]    Deserialize required 2783357 microseconds.
+[TRT]    
+[TRT]    CUDA engine context initialized on device GPU:
+[TRT]       -- layers       29
+[TRT]       -- maxBatchSize 1
+[TRT]       -- workspace    0
+[TRT]       -- deviceMemory 29827072
+[TRT]       -- bindings     2
+[TRT]       binding 0
+                -- index   0
+                -- name    'input_0'
+                -- type    FP32
+                -- in/out  INPUT
+                -- # dims  4
+                -- dim #0  1 (SPATIAL)
+                -- dim #1  3 (SPATIAL)
+                -- dim #2  224 (SPATIAL)
+                -- dim #3  224 (SPATIAL)
+[TRT]       binding 1
+                -- index   1
+                -- name    'output_0'
+                -- type    FP32
+                -- in/out  OUTPUT
+                -- # dims  2
+                -- dim #0  1 (SPATIAL)
+                -- dim #1  2 (SPATIAL)
+[TRT]    
+[TRT]    binding to input 0 input_0  binding index:  0
+[TRT]    binding to input 0 input_0  dims (b=1 c=3 h=224 w=224) size=602112
+[TRT]    binding to output 0 output_0  binding index:  1
+[TRT]    binding to output 0 output_0  dims (b=1 c=2 h=1 w=1) size=8
+[TRT]    
+[TRT]    device GPU, models/basic-pallet/resnet18.onnx initialized.
+[TRT]    imageNet -- loaded 2 class info entries
+[TRT]    imageNet -- models/basic-pallet/resnet18.onnx initialized.
+[video]  created imageLoader from file:///home/gamma/jetson-inference/python/training/classification/data/pallet/test/empty
+------------------------------------------------
+imageLoader video options:
+------------------------------------------------
+  -- URI: file:///home/gamma/jetson-inference/python/training/classification/data/pallet/test/empty
+     - protocol:  file
+     - location:  data/pallet/test/empty
+  -- deviceType: file
+  -- ioType:     input
+  -- codec:      unknown
+  -- width:      0
+  -- height:     0
+  -- frameRate:  0.000000
+  -- bitRate:    0
+  -- numBuffers: 4
+  -- zeroCopy:   true
+  -- flipMethod: none
+  -- loop:       0
+------------------------------------------------
+[video]  created imageWriter from file:///home/gamma/jetson-inference/python/training/classification/data/pallet/output/empty
+------------------------------------------------
+imageWriter video options:
+------------------------------------------------
+  -- URI: file:///home/gamma/jetson-inference/python/training/classification/data/pallet/output/empty
+     - protocol:  file
+     - location:  data/pallet/output/empty
+  -- deviceType: file
+  -- ioType:     output
+  -- codec:      unknown
+  -- width:      0
+  -- height:     0
+  -- frameRate:  0.000000
+  -- bitRate:    0
+  -- numBuffers: 4
+  -- zeroCopy:   true
+  -- flipMethod: none
+  -- loop:       0
+------------------------------------------------
+[OpenGL] glDisplay -- X screen 0 resolution:  1920x1080
+[OpenGL] glDisplay -- X window resolution:    1920x1080
+[OpenGL] glDisplay -- display device initialized (1920x1080)
+[video]  created glDisplay from display://0
+------------------------------------------------
+glDisplay video options:
+------------------------------------------------
+  -- URI: display://0
+     - protocol:  display
+     - location:  0
+  -- deviceType: display
+  -- ioType:     output
+  -- codec:      raw
+  -- width:      1920
+  -- height:     1080
+  -- frameRate:  0.000000
+  -- bitRate:    0
+  -- numBuffers: 4
+  -- zeroCopy:   true
+  -- flipMethod: none
+  -- loop:       0
+------------------------------------------------
+[image] loaded 'data/pallet/test/empty/76_0.jpg'  (1732x22, 3 channels)
+class 0000 - 0.231626  (empty)
+class 0001 - 0.768374  (pallet)
+[OpenGL] glDisplay -- set the window size to 1732x22
+[OpenGL] creating 1732x22 texture (GL_RGB8 format, 114312 bytes)
+[cuda]   registered openGL texture for interop access (1732x22, GL_RGB8, 114312 bytes)
+[image] saved 'data/pallet/output/empty/0.jpg'  (1732x22, 3 channels)
+
+[TRT]    ------------------------------------------------
+[TRT]    Timing Report models/basic-pallet/resnet18.onnx
+[TRT]    ------------------------------------------------
+[TRT]    Pre-Process   CPU   0.07568ms  CUDA   0.74323ms
+[TRT]    Network       CPU  48.27927ms  CUDA  47.40682ms
+[TRT]    Post-Process  CPU   0.08016ms  CUDA   0.00135ms
+[TRT]    Total         CPU  48.43510ms  CUDA  48.15141ms
+[TRT]    ------------------------------------------------
+
+[TRT]    note -- when processing a single image, run 'sudo jetson_clocks' before
+                to disable DVFS for more accurate profiling/timing measurements
+
+[image] loaded 'data/pallet/test/empty/134_0.jpg'  (1920x18, 3 channels)
+class 0000 - 0.254356  (empty)
+class 0001 - 0.745644  (pallet)
+[OpenGL] creating 1920x18 texture (GL_RGB8 format, 103680 bytes)
+[cuda]   registered openGL texture for interop access (1920x18, GL_RGB8, 103680 bytes)
+[image] saved 'data/pallet/output/empty/1.jpg'  (1920x18, 3 channels)
+
+[TRT]    ------------------------------------------------
+[TRT]    Timing Report models/basic-pallet/resnet18.onnx
+[TRT]    ------------------------------------------------
+[TRT]    Pre-Process   CPU   0.11792ms  CUDA   0.56713ms
+[TRT]    Network       CPU  28.11445ms  CUDA  27.69411ms
+[TRT]    Post-Process  CPU   0.06537ms  CUDA   0.00088ms
+[TRT]    Total         CPU  28.29774ms  CUDA  28.26213ms
+[TRT]    ------------------------------------------------
+
+[image] loaded 'data/pallet/test/empty/194_0.jpg'  (1992x24, 3 channels)
+class 0000 - 0.500299  (empty)
+class 0001 - 0.499701  (pallet)
+[OpenGL] creating 1992x24 texture (GL_RGB8 format, 143424 bytes)
+[cuda]   registered openGL texture for interop access (1992x24, GL_RGB8, 143424 bytes)
+[image] saved 'data/pallet/output/empty/2.jpg'  (1992x24, 3 channels)
+
+[TRT]    ------------------------------------------------
+[TRT]    Timing Report models/basic-pallet/resnet18.onnx
+[TRT]    ------------------------------------------------
+[TRT]    Pre-Process   CPU   0.07646ms  CUDA   0.55906ms
+[TRT]    Network       CPU  29.96268ms  CUDA  29.79807ms
+[TRT]    Post-Process  CPU   0.07360ms  CUDA   0.00089ms
+[TRT]    Total         CPU  30.11274ms  CUDA  30.35802ms
+[TRT]    ------------------------------------------------
+
+[image] loaded 'data/pallet/test/empty/197_0.jpg'  (1922x17, 3 channels)
+class 0000 - 0.459717  (empty)
+class 0001 - 0.540283  (pallet)
+[OpenGL] creating 1922x17 texture (GL_RGB8 format, 98022 bytes)
+[cuda]   registered openGL texture for interop access (1922x17, GL_RGB8, 98022 bytes)
+[image] saved 'data/pallet/output/empty/3.jpg'  (1922x17, 3 channels)
+
+[TRT]    ------------------------------------------------
+[TRT]    Timing Report models/basic-pallet/resnet18.onnx
+[TRT]    ------------------------------------------------
+[TRT]    Pre-Process   CPU   0.07511ms  CUDA   0.47026ms
+[TRT]    Network       CPU  17.81538ms  CUDA  17.48427ms
+[TRT]    Post-Process  CPU   0.05802ms  CUDA   0.00057ms
+[TRT]    Total         CPU  17.94851ms  CUDA  17.95510ms
+[TRT]    ------------------------------------------------
+
+[image] loaded 'data/pallet/test/empty/256_0.jpg'  (1920x18, 3 channels)
+class 0000 - 0.531614  (empty)
+class 0001 - 0.468386  (pallet)
+[image] saved 'data/pallet/output/empty/4.jpg'  (1920x18, 3 channels)
+
+[TRT]    ------------------------------------------------
+[TRT]    Timing Report models/basic-pallet/resnet18.onnx
+[TRT]    ------------------------------------------------
+[TRT]    Pre-Process   CPU   0.07479ms  CUDA   0.47120ms
+[TRT]    Network       CPU  15.99225ms  CUDA  17.33396ms
+[TRT]    Post-Process  CPU   0.10365ms  CUDA   0.00062ms
+[TRT]    Total         CPU  16.17069ms  CUDA  17.80578ms
+[TRT]    ------------------------------------------------
+
+[image] loaded 'data/pallet/test/empty/332_0.jpg'  (613x29, 3 channels)
+class 0000 - 0.455239  (empty)
+class 0001 - 0.544762  (pallet)
+[OpenGL] glDisplay -- set the window size to 613x29
+[OpenGL] creating 613x29 texture (GL_RGB8 format, 53331 bytes)
+[cuda]   registered openGL texture for interop access (613x29, GL_RGB8, 53331 bytes)
+[image] saved 'data/pallet/output/empty/5.jpg'  (613x29, 3 channels)
+
+[TRT]    ------------------------------------------------
+[TRT]    Timing Report models/basic-pallet/resnet18.onnx
+[TRT]    ------------------------------------------------
+[TRT]    Pre-Process   CPU   0.12214ms  CUDA   0.66656ms
+[TRT]    Network       CPU  19.30411ms  CUDA  18.85911ms
+[TRT]    Post-Process  CPU   0.09417ms  CUDA   0.00062ms
+[TRT]    Total         CPU  19.52042ms  CUDA  19.52630ms
+[TRT]    ------------------------------------------------
+
+[image] loaded 'data/pallet/test/empty/333_0.jpg'  (622x29, 3 channels)
+class 0000 - 0.412954  (empty)
+class 0001 - 0.587046  (pallet)
+[OpenGL] glDisplay -- set the window size to 622x29
+[OpenGL] creating 622x29 texture (GL_RGB8 format, 54114 bytes)
+[cuda]   registered openGL texture for interop access (622x29, GL_RGB8, 54114 bytes)
+[image] saved 'data/pallet/output/empty/6.jpg'  (622x29, 3 channels)
+
+[TRT]    ------------------------------------------------
+[TRT]    Timing Report models/basic-pallet/resnet18.onnx
+[TRT]    ------------------------------------------------
+[TRT]    Pre-Process   CPU   0.09459ms  CUDA   0.62302ms
+[TRT]    Network       CPU  18.69946ms  CUDA  18.05911ms
+[TRT]    Post-Process  CPU   0.08360ms  CUDA   0.12787ms
+[TRT]    Total         CPU  18.87764ms  CUDA  18.81000ms
+[TRT]    ------------------------------------------------
+

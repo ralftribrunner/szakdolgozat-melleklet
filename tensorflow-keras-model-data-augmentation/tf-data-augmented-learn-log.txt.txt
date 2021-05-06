@@ -1,0 +1,68 @@
+2021-04-27 21:42:50.295889: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'cudart64_110.dll'; dlerror: cudart64_110.dll not found
+2021-04-27 21:42:50.296043: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+3513
+Found 3513 files belonging to 2 classes.
+Using 2811 files for training.
+2021-04-27 21:43:00.434838: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'nvcuda.dll'; dlerror: nvcuda.dll not found
+2021-04-27 21:43:00.435014: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2021-04-27 21:43:00.439525: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: DESKTOP-PD4EVBV
+2021-04-27 21:43:00.439744: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: DESKTOP-PD4EVBV
+2021-04-27 21:43:00.440383: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Found 3513 files belonging to 2 classes.
+Using 702 files for validation.
+['empty', 'pallet']
+2021-04-27 21:43:00.621027: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+(32, 500, 15, 3)
+(32,)
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+rescaling_1 (Rescaling)      (None, 500, 15, 3)        0
+_________________________________________________________________
+conv2d (Conv2D)              (None, 500, 15, 16)       448
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 250, 7, 16)        0
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 250, 7, 32)        4640
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 125, 3, 32)        0
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 125, 3, 64)        18496
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 62, 1, 64)         0
+_________________________________________________________________
+flatten (Flatten)            (None, 3968)              0
+_________________________________________________________________
+dense (Dense)                (None, 128)               508032
+_________________________________________________________________
+dense_1 (Dense)              (None, 2)                 258
+=================================================================
+Total params: 531,874
+Trainable params: 531,874
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/10
+2021-04-27 21:43:14.103632: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:177] Filling up shuffle buffer (this may take a while): 44 of 1000
+2021-04-27 21:43:21.074103: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:230] Shuffle buffer filled.
+88/88 [==============================] - 31s 155ms/step - loss: 0.3597 - accuracy: 0.8286 - val_loss: 0.0841 - val_accuracy: 0.9701
+Epoch 2/10
+88/88 [==============================] - 10s 117ms/step - loss: 0.0619 - accuracy: 0.9800 - val_loss: 0.0314 - val_accuracy: 0.9900
+Epoch 3/10
+88/88 [==============================] - 11s 119ms/step - loss: 0.0348 - accuracy: 0.9861 - val_loss: 0.0304 - val_accuracy: 0.9900
+Epoch 4/10
+88/88 [==============================] - 11s 121ms/step - loss: 0.0436 - accuracy: 0.9881 - val_loss: 0.0421 - val_accuracy: 0.9929
+Epoch 5/10
+88/88 [==============================] - 11s 123ms/step - loss: 0.0298 - accuracy: 0.9919 - val_loss: 0.0238 - val_accuracy: 0.9943
+Epoch 6/10
+88/88 [==============================] - 11s 122ms/step - loss: 0.0307 - accuracy: 0.9916 - val_loss: 0.0253 - val_accuracy: 0.9929
+Epoch 7/10
+88/88 [==============================] - 11s 127ms/step - loss: 0.0091 - accuracy: 0.9987 - val_loss: 0.0228 - val_accuracy: 0.9943
+Epoch 8/10
+88/88 [==============================] - 12s 131ms/step - loss: 0.0075 - accuracy: 0.9981 - val_loss: 0.0266 - val_accuracy: 0.9900
+Epoch 9/10
+88/88 [==============================] - 11s 129ms/step - loss: 0.0451 - accuracy: 0.9848 - val_loss: 0.0187 - val_accuracy: 0.9972
+Epoch 10/10
+88/88 [==============================] - 11s 127ms/step - loss: 0.0081 - accuracy: 0.9959 - val_loss: 0.0147 - val_accuracy: 0.9929
+Model saved

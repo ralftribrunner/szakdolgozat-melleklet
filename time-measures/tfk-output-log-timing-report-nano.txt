@@ -1,0 +1,116 @@
+2021-04-09 01:33:03.703714: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2021-04-09 01:33:14.417167: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-04-09 01:33:14.460302: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2021-04-09 01:33:14.501485: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] ARM64 does not support NUMA - returning NUMA node zero
+2021-04-09 01:33:14.501676: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Found device 0 with properties: 
+pciBusID: 0000:00:00.0 name: NVIDIA Tegra X1 computeCapability: 5.3
+coreClock: 0.9216GHz coreCount: 1 deviceMemorySize: 1.93GiB deviceMemoryBandwidth: 194.55MiB/s
+2021-04-09 01:33:14.501772: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2021-04-09 01:33:14.596000: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.10
+2021-04-09 01:33:14.596537: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.10
+2021-04-09 01:33:14.656321: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-04-09 01:33:14.713683: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-04-09 01:33:14.774733: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-04-09 01:33:14.793894: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.10
+2021-04-09 01:33:14.797580: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-04-09 01:33:14.797882: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] ARM64 does not support NUMA - returning NUMA node zero
+2021-04-09 01:33:14.798145: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] ARM64 does not support NUMA - returning NUMA node zero
+2021-04-09 01:33:14.798254: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1888] Adding visible gpu devices: 0
+2021-04-09 01:33:14.801024: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-04-09 01:33:14.801417: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] ARM64 does not support NUMA - returning NUMA node zero
+2021-04-09 01:33:14.801570: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Found device 0 with properties: 
+pciBusID: 0000:00:00.0 name: NVIDIA Tegra X1 computeCapability: 5.3
+coreClock: 0.9216GHz coreCount: 1 deviceMemorySize: 1.93GiB deviceMemoryBandwidth: 194.55MiB/s
+2021-04-09 01:33:14.801716: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2021-04-09 01:33:14.801837: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.10
+2021-04-09 01:33:14.801921: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.10
+2021-04-09 01:33:14.801994: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-04-09 01:33:14.802069: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-04-09 01:33:14.802138: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-04-09 01:33:14.802210: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.10
+2021-04-09 01:33:14.802280: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-04-09 01:33:14.802481: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] ARM64 does not support NUMA - returning NUMA node zero
+2021-04-09 01:33:14.802703: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] ARM64 does not support NUMA - returning NUMA node zero
+2021-04-09 01:33:14.802790: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1888] Adding visible gpu devices: 0
+2021-04-09 01:33:14.802907: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+2021-04-09 01:33:20.342452: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1287] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-04-09 01:33:20.342531: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1293]      0 
+2021-04-09 01:33:20.342584: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1306] 0:   N 
+2021-04-09 01:33:20.342945: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] ARM64 does not support NUMA - returning NUMA node zero
+2021-04-09 01:33:20.343326: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] ARM64 does not support NUMA - returning NUMA node zero
+2021-04-09 01:33:20.343562: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] ARM64 does not support NUMA - returning NUMA node zero
+2021-04-09 01:33:20.343714: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 34 MB memory) -> physical GPU (device: 0, name: NVIDIA Tegra X1, pci bus id: 0000:00:00.0, compute capability: 5.3)
+2021-04-09 01:33:21.715495: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-04-09 01:33:21.716615: W tensorflow/core/platform/profile_utils/cpu_utils.cc:116] Failed to find bogomips or clock in /proc/cpuinfo; cannot determine CPU frequency
+2021-04-09 01:33:22.216342: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.10
+2021-04-09 01:33:24.653282: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-04-09 01:33:37.107767: W tensorflow/core/common_runtime/bfc_allocator.cc:248] Allocator (GPU_0_bfc) ran out of memory trying to allocate 16.02MiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-04-09 01:33:37.109154: W tensorflow/core/common_runtime/bfc_allocator.cc:248] Allocator (GPU_0_bfc) ran out of memory trying to allocate 16.36MiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-04-09 01:33:37.125803: W tensorflow/core/common_runtime/bfc_allocator.cc:248] Allocator (GPU_0_bfc) ran out of memory trying to allocate 36.88MiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-04-09 01:33:37.859592: W tensorflow/core/common_runtime/bfc_allocator.cc:248] Allocator (GPU_0_bfc) ran out of memory trying to allocate 282.08MiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-04-09 01:33:37.860414: W tensorflow/core/common_runtime/bfc_allocator.cc:248] Allocator (GPU_0_bfc) ran out of memory trying to allocate 16.05MiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-04-09 01:33:37.860804: W tensorflow/core/common_runtime/bfc_allocator.cc:248] Allocator (GPU_0_bfc) ran out of memory trying to allocate 18.52MiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-04-09 01:33:37.861147: W tensorflow/core/common_runtime/bfc_allocator.cc:248] Allocator (GPU_0_bfc) ran out of memory trying to allocate 29.36MiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-04-09 01:33:37.904492: W tensorflow/core/common_runtime/bfc_allocator.cc:248] Allocator (GPU_0_bfc) ran out of memory trying to allocate 16.07MiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-04-09 01:33:37.929669: W tensorflow/core/common_runtime/bfc_allocator.cc:248] Allocator (GPU_0_bfc) ran out of memory trying to allocate 16.41MiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2021-04-09 01:33:37.930225: W tensorflow/core/common_runtime/bfc_allocator.cc:248] Allocator (GPU_0_bfc) ran out of memory trying to allocate 280.13MiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 296.89478874206543 ms
+Prediction time: 17382.26628303528 ms
+TOTAL: 17679.161071777344 ms 
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.84 percent confidence. It should be empty.
+Preprocessing time: 42.41681098937988 ms
+Prediction time: 1731.4727306365967 ms
+TOTAL: 1773.8895416259766 ms 
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 9.695768356323242 ms
+Prediction time: 216.49885177612305 ms
+TOTAL: 226.1946201324463 ms 
+----------------------------------------------------------------
+This image most likely belongs to empty with a 99.93 percent confidence. It should be empty.
+Preprocessing time: 4.231452941894531 ms
+Prediction time: 214.0944004058838 ms
+TOTAL: 218.32585334777832 ms 
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 5.753278732299805 ms
+Prediction time: 211.0421657562256 ms
+TOTAL: 216.7954444885254 ms 
+----------------------------------------------------------------
+This image most likely belongs to empty with a 98.90 percent confidence. It should be empty.
+Preprocessing time: 5.199193954467773 ms
+Prediction time: 903.0458927154541 ms
+TOTAL: 908.2450866699219 ms 
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 5.717754364013672 ms
+Prediction time: 211.22050285339355 ms
+TOTAL: 216.93825721740723 ms 
+----------------------------------------------------------------
+This image most likely belongs to empty with a 95.49 percent confidence. It should be empty.
+Preprocessing time: 5.3920745849609375 ms
+Prediction time: 218.2927131652832 ms
+TOTAL: 223.68478775024414 ms 
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 4.85539436340332 ms
+Prediction time: 211.49063110351562 ms
+TOTAL: 216.34602546691895 ms 
+----------------------------------------------------------------
+This image most likely belongs to empty with a 93.89 percent confidence. It should be empty.
+Preprocessing time: 5.574464797973633 ms
+Prediction time: 204.45632934570312 ms
+TOTAL: 210.03079414367676 ms 
+----------------------------------------------------------------
+This image most likely belongs to pallet with a 100.00 percent confidence. It should a pallet.
+Preprocessing time: 5.392313003540039 ms
+Prediction time: 194.7009563446045 ms
+TOTAL: 200.09326934814453 ms 
+----------------------------------------------------------------
+This image most likely belongs to empty with a 91.23 percent confidence. It should be empty.
+Preprocessing time: 5.285739898681641 ms
+Prediction time: 210.08658409118652 ms
+TOTAL: 215.37232398986816 ms 
