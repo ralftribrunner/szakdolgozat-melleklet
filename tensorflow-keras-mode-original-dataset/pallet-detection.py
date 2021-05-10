@@ -136,7 +136,7 @@ for i in range(1,7):
     img_array = tf.expand_dims(img_array, 0) # Create a batch
 
     predictions = model.predict(img_array) # kép átfuttatása a modellen
-    score = tf.nn.softmax(predictions[0]) # softmaxszal 100-al beszorozva százalékos eredményt kaphatunk.
+    score = tf.nn.softmax(predictions[0]) # szoftmaxszal 100-al beszorozva százalékos eredményt kaphatunk.
 
     print(
         "This image most likely belongs to {} with a {:.2f} percent confidence. It should a pallet."

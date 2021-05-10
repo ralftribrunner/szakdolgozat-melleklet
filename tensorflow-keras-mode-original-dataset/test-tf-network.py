@@ -15,6 +15,7 @@ data_dir = pathlib.Path('./test')
 test_pallet = list(data_dir.glob('pallet/*'))
 test_empty = list(data_dir.glob('empty/*'))
 
+# Klasszifikáció 14 tesztképre
 for i in range(1,7):
 
     preprocess_start=time.time()

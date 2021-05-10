@@ -1,9 +1,12 @@
+# Képek átfuttatása a beolvasott neurális hálózati modellen és detekciós idő mérése
+
 import numpy as np
 import tensorflow as tf
 import pathlib
 import time
 from tensorflow import keras
 
+# Elmentett modell beolvasása
 model=keras.models.load_model('tf-pallet-detection.h5')
 img_height = 500
 img_width = 15
@@ -14,6 +17,7 @@ test_empty = list(data_dir.glob('empty/*'))
 pallet_correct=0
 empty_correct=0
 
+# Klasszifikáció az összes tesztképre
 for i in range(0,len(test_pallet)):
     print("________________________________________________________________")
     print("Image: "+str(i+1)+".")
@@ -40,8 +44,11 @@ for i in range(0,len(test_pallet)):
         "This image most likely belongs to {} with a {:.2f} percent confidence. It should a pallet."
         .format(class_names[np.argmax(score)], 100 * np.max(score))
     )
+    #Preprocessing time: kép beolvasása
     print("Preprocessing time: " + str(preprocess_time*1000)  +" ms")
+    #Prediction time: kép átfuttatása a neurális hálózaton
     print("Prediction time: " + str(prediction_time*1000) + " ms")
+    #Teljes detektálási idő
     print("TOTAL: " + str(total_time*1000) + " ms ")
 
     if(class_names[np.argmax(score)]=="pallet"):
@@ -82,7 +89,12 @@ for i in range(0,len(test_pallet)):
     else:
          print("WRONG DETECTION")
 print("________________________________________________________________")
+# Összes raklapos képből hány lett helyes
 print("Pallet Accuracy: " + str(pallet_correct) + "/30")
+# Összes raklap nélküli képből hány lett helyes
 print("Empty Accuracy: " + str(empty_correct) + "/30")
 
+# Forrás:
 # https://www.tensorflow.org/guide/keras/save_and_serialize#introduction
+# https://www.tensorflow.org/tutorials/images/classification
+

@@ -1,3 +1,5 @@
+# Augmentálást végez a raklap nélküli képeken
+
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
 import os
 
@@ -14,7 +16,9 @@ def load_images_from_folder(folder):
 
 images=load_images_from_folder("./empty")
 
+# Vertikális és horizontális tükrözés, horizontális eltolás (a kép 10%-val) műveletek kombinációit végzi a bemeneti képen
 
+# augmentációs paraméterek
 datagen = ImageDataGenerator(
         vertical_flip = True,
 		horizontal_flip = True,
@@ -23,6 +27,7 @@ datagen = ImageDataGenerator(
 	
 for i in range(0,len(images)):
 	j = 0
+    # új képek létrehozása
 	for batch in datagen.flow(images[i], batch_size = 1,
 							save_to_dir ='generated-dataset/empty',
 							save_prefix ='empty', save_format ='jpg'):
@@ -31,4 +36,8 @@ for i in range(0,len(images)):
 			break
 
 print("Data augmentation is done on the empty dataset")
+
+# Forrás:
+# https://www.geeksforgeeks.org/python-data-augmentation/
+# https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator
 

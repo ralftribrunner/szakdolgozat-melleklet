@@ -1,3 +1,5 @@
+# Augmentálást végez a raklapos képeken
+
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
 import os
 
@@ -32,5 +34,7 @@ for i in range(0,len(images)):
 
 print("Data augmentation is done on the pallet dataset")
 
-#https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator
+# Forrás: 
+# https://www.geeksforgeeks.org/python-data-augmentation/
+# https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator
 
