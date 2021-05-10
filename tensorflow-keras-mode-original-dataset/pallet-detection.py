@@ -1,3 +1,5 @@
+# Neurális hálózati architektúra létrehozása és fetanítása TensorFlow Keras-al.
+
 import matplotlib.pyplot as plt
 import numpy as np
 import os
@@ -12,6 +14,7 @@ from tensorflow.python.ops.functional_ops import For
 from tensorflow.python.ops.gen_math_ops import Range
 from tensorflow.python.ops.parallel_for.control_flow_ops import for_loop
 
+# Az adathalmazban osztályokra vannak bontva a képek.
 data_dir = pathlib.Path('./train')
 image_count = len(list(data_dir.glob('*/*.jpg')))
 print(image_count)
@@ -28,6 +31,7 @@ batch_size = 32
 img_height = 500
 img_width = 15
 
+# Tanulóhalmaz létrehozása, az adathalmaz 80%-a megkeverve
 train_ds = tf.keras.preprocessing.image_dataset_from_directory(
   data_dir,
   validation_split=0.2,
@@ -36,6 +40,7 @@ train_ds = tf.keras.preprocessing.image_dataset_from_directory(
   image_size=(img_height, img_width),
   batch_size=batch_size)
 
+# Validációs halmaz létrehozása, az adathalmaz 20%-a megkeverve
 val_ds = tf.keras.preprocessing.image_dataset_from_directory(
   data_dir,
   validation_split=0.2,
@@ -53,16 +58,19 @@ for image_batch, labels_batch in train_ds:
   break
 
 AUTOTUNE = tf.data.AUTOTUNE
-
+#Cache-eléssel gyorsítható a tanítási folyamat
 train_ds = train_ds.cache().shuffle(1000).prefetch(buffer_size=AUTOTUNE)
 val_ds = val_ds.cache().prefetch(buffer_size=AUTOTUNE)
 
+#A képek pixel értékeit 0 és 1 közé képzi le
 normalization_layer = layers.experimental.preprocessing.Rescaling(1./255)
 
 num_classes = 2
 
 model = Sequential([
+  #A képek pixel értékeit 0 és 1 közé képzi le
   layers.experimental.preprocessing.Rescaling(1./255, input_shape=(img_height, img_width, 3)),
+  #16 -> filter-ek száma, 3->kernel méret, 'same'->a kimeneti kép ugyanakkora maradjon, mint a bemeneti 
   layers.Conv2D(16, 3, padding='same', activation='relu'),
   layers.MaxPooling2D(),
   layers.Conv2D(32, 3, padding='same', activation='relu'),
@@ -70,6 +78,7 @@ model = Sequential([
   layers.Conv2D(64, 3, padding='same', activation='relu'),
   layers.MaxPooling2D(),
   layers.Flatten(),
+  #128->perceptronok száma
   layers.Dense(128, activation='relu'),
   layers.Dense(num_classes)
 ])
@@ -80,6 +89,7 @@ model.compile(optimizer='adam',
 
 model.summary()
 
+#tanítás 10 epochon keresztül
 epochs=10
 history = model.fit(
   train_ds,
@@ -87,6 +97,7 @@ history = model.fit(
   epochs=epochs
 )
 
+#model lementése, hogy hordozható legyen
 model.save('tf-pallet-detection.h5')
 print("Model saved")
 
@@ -112,7 +123,7 @@ plt.legend(loc='upper right')
 plt.title('Training and Validation Loss')
 plt.show()
 
-
+#model tesztelése 14 képen (osztályonként 7-7)
 for i in range(1,7):
 
     data_dir = pathlib.Path('./test')
@@ -124,8 +135,8 @@ for i in range(1,7):
     img_array = keras.preprocessing.image.img_to_array(img)
     img_array = tf.expand_dims(img_array, 0) # Create a batch
 
-    predictions = model.predict(img_array)
-    score = tf.nn.softmax(predictions[0])
+    predictions = model.predict(img_array) # kép átfuttatása a modellen
+    score = tf.nn.softmax(predictions[0]) # softmaxszal 100-al beszorozva százalékos eredményt kaphatunk.
 
     print(
         "This image most likely belongs to {} with a {:.2f} percent confidence. It should a pallet."
@@ -149,5 +160,5 @@ for i in range(1,7):
     )
 
 
-
+# Forrás:
 # https://www.tensorflow.org/tutorials/images/classification
