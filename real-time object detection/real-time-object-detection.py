@@ -1,3 +1,6 @@
+# A feltanított ssd-mobilenet-v2 neurális hálózattal valósidejű objektumdetekciót hajt végre a program.
+
+
 import jetson.inference
 import jetson.utils
 
@@ -10,3 +13,6 @@ while display.IsOpen():
     detections=net.Detect(img,width,height)
     display.RenderOnce(img,width,height)
     display.SetTitle("Object Detection | Network {:.0f} FPS".format(net.GetNetworkFPS()))
+
+# Forrás:
+# https://www.youtube.com/watch?v=bcM5AQSAzUY
