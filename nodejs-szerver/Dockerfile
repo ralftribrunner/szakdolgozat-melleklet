@@ -11,3 +11,6 @@ COPY . .
 EXPOSE 8080
 # A szerver elindítása
 CMD ["node", "app.js"]
+
+# forrás:
+# https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
