@@ -1,3 +1,4 @@
+# A beolvasott képeken gamma transzformációt végez.
 import cv2 as cv
 import numpy as np
 from matplotlib import image, pyplot as plt
@@ -15,6 +16,7 @@ images=load_images_from_folder("./")
 
 gamma= 3.5 #0.04-25.0
 
+# Look Up Table a gamma függvényhez
 lookUpTable = np.empty((1,256), np.uint8)
 for i in range(256):
     lookUpTable[0,i] = np.clip(pow(i / 255.0, gamma) * 255.0, 0, 255)
@@ -37,3 +39,7 @@ for i in range(0,len(result)):
     j+=1
 
 plt.show()
+
+# forrás:
+# https://stackoverflow.com/questions/30230592/loading-all-images-using-imread-from-a-given-folder/30230738
+# https://docs.opencv.org/3.4/d3/dc1/tutorial_basic_linear_transform.html

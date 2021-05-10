@@ -1,3 +1,6 @@
+# Ezzel a szkripttel a beolvasott képek kontrasztján és világosságán lehet változtatni.
+# Ezt a cv.convertScaleAbs() függvénnyel lehet egyszerűen megtenni.
+
 import cv2 as cv
 import numpy as np
 from matplotlib import image, pyplot as plt
@@ -15,8 +18,8 @@ images=load_images_from_folder("./")
 
 alpha=0.7 #0.0-3.0 default:1 opt:0.7
 beta=50   #0-200   default:0 opt:50    
-#a kontraszttal alpha a nagy szín különbségét tudtam csökkenteni
-#a fényerővel visszavilágostottam hogy az eredetihez hasonló legyen
+#A kontraszttal (alpha) a nagy szín különbségét tudtam csökkenteni
+#A fényerővel (beta) visszavilágosítottam, hogy az eredetihez hasonló legyen
 
 rows, cols = (len(images), 2)
 result = [[0 for i in range(cols)] for j in range(rows)]
@@ -36,3 +39,7 @@ for i in range(0,len(result)):
     j+=1
 
 plt.show()
+
+# forrás:
+# https://stackoverflow.com/questions/30230592/loading-all-images-using-imread-from-a-given-folder/30230738
+# https://docs.opencv.org/3.4/d3/dc1/tutorial_basic_linear_transform.html
